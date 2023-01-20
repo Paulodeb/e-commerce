@@ -1,0 +1,131 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    /* text-align: center; */
+    align-items: center; 
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); */
+}
+.p-txt{
+  display: inline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.download {
+  text-align: center;
+  padding: 10px 0;
+  /* border: 1px solid #000; */
+  width: 30vh;
+
+}
+
+.sign{
+
+  width: 30vh;
+  padding: 10px 0;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    resize: vertical;
+  }
+
+  .search{
+    display: flex;
+    text-align: center;
+    width: 95vh;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+  }
+  .search-img {
+    margin: 0px 0;
+    width: 10%;
+    height: 5vh;
+    background-color: #fff;
+    
+    object-fit: contain;
+  }
+  
+
+  
+
+  
+ .menu{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    padding: 10px 0;
+ }
+ 
+ .burger-menu {
+  height: 100%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  height: 0.3em;
+  width: 2.2em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: #000;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+}
+
+
+.menu-items {
+  width: 20%;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+/* sliding menu */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* animations */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+.burger-bar.clicked:nth-child(3) {
+  margin-top: 23px;
+
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked:nth-child(1) {
+  transform: rotate(0deg) translate(0, 0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}

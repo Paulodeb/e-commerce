@@ -1,0 +1,82 @@
+.footer {
+  display: flex;
+  margin-bottom: 20px;
+  overflow: hidden;
+  
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  width: 37vh;
+  flex-wrap: wrap;
+  margin: 0 5px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+
+li {
+  list-style: none;
+  padding: 2px 0px;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+.input input {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.input button {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+}
+
+.copyright {
+  display: block;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/* Text */
+.sub-text {
+  font-size: .9em;
+  font-weight: 500;
+  color: #ccc;
+  padding-top: 10px;
+}
+.head-text{
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+.logo-text {
+  font-size: 1.6em;
+  margin-top: 30px;
+  font-weight: 600;
+  color: #000;
+  padding-top: 10px;
+}
