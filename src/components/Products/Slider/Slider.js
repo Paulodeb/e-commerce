@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './Slide.css'
 const Slider = () => {
     const [products, setProducts] = useState([])
-    const [start, setStart] = useState(0)
-    const [end, setEnd] = useState(3)
+    const [start ] = useState(0)
+    const [end ] = useState(3)
     
     const getProducts =  () => {
         fetch(`https://api.escuelajs.co/api/v1/categories`)
