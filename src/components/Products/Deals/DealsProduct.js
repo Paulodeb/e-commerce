@@ -5,8 +5,6 @@ const DealsProduct = () => {
     const [products, setProducts] = useState([])
     const [start, setStart] = useState(0)
     const [end, setEnd] = useState(4)
-    const [fadedleft, setFadedleft] = useState(false)
-    const [fadedright, setFadedright] = useState(false)
     
     
     const getProducts =  () => {
@@ -26,20 +24,16 @@ const nextSlide = () => {
     if (end < products.length) {
         setEnd(end + 1)
         setStart(start + 1)
-        setFadedleft(false)
-    } else {
-        setFadedright(true)
-    }
+        
+    } 
 }
 const prevSlide = () => {
     
     if (start > 0) {
         setEnd(end - 1)
         setStart(start - 1)
-        setFadedright(false)
-    } else {
-        setFadedleft(true)
-    }
+      
+    } 
 }
 
   return (
