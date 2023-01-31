@@ -109,10 +109,10 @@ const Deals = () => {
 
   return (
     <div className="container-fluid background">
-      <div className=" row justify-content-start py-5">
+      <div className=" d-flex flex-wrap justify-content-start py-5">
         <div
-         style={{ width: '20%', margin: '0 auto' }}
-         className="pt-4 mt-5 justify-content-center"
+         style={{ width: '14rem', height:'12rem', margin: '0 auto' }}
+         className="pt-4 mt-5 justify-content-start text-start"
         >
           <Timer />
         </div>
@@ -122,7 +122,7 @@ const Deals = () => {
         className="pe-2 "
         >
           <Slider {...settings}>
-            {products.map((productObj, index) => (
+            {products.map((productObj) => (
               <div key={productObj.id} className=" ">
                 <Card style={{ width: "15rem", height: "20rem", border: "none" }}>
                   <Card.Img
