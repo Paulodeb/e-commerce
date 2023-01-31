@@ -1,0 +1,13 @@
+.img{
+    object-fit: contain;    
+    height: 8rem;
+    justify-content: center;
+    align-items: center;  
+   
+}
+
+.button{
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
