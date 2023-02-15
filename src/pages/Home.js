@@ -7,7 +7,6 @@ import PopularProducts from '../components/PopularProducts/PopularProducts';
 import {PopularProductsdata} from '../components/PopularProducts/PopularProductsdata';
 import ShopioProduct from '../components/ShopioProduct/ShopioProduct';
 import SlideShow from '../components/SlideShow/SlideShow';
-import { SlideShowdata } from '../components/SlideShow/SlideShowdata';
 
 const Home = () => {
 

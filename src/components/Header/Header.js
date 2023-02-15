@@ -6,14 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import { BsSearch } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
-import  { AiOutlineDownload, AiOutlineSearch } from "react-icons/ai";
+import  { AiOutlineDownload } from "react-icons/ai";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import './HeaderStyles.css'
 
 function Header({products}) {
 
   const [value, setValue] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState(products);
 
     
   const handleChange = (event) => {
