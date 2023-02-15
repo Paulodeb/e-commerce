@@ -71,10 +71,10 @@ const PopularProducts = () => {
   return (
     <div className="container-fluid px-5 py-2 ">
       <div className="d-flex my-4 justify-content-between">
-        <div className="  ">
-          <h1 className="h4 text-muted text-start">Popular Products</h1>
+        <div className="  pop-head ">
+          <h1 className="h4  text-muted text-start">Popular Products</h1>
         </div>
-        <div className=" col-2 ">
+        <div className=" button-container">
           <div className=" d-flex  justify-content-end">
             <div className="  me-2 next" onClick={prevSlide}>
               <button className=" border-0 text-muted text-center button bg-white">
@@ -90,17 +90,13 @@ const PopularProducts = () => {
         </div>
       </div>
 
-      <div className=""
-      style={{ width: '100%', margin: '0 auto' }}>
+      <div className="pop-slide-container">
         <Slider ref={slider} {...settings}>
           {products.map((productObj, index) => {
             return (
-              <div key={productObj.id} className="">
+              <div key={productObj.id} >
                 
-                <Card
-                  className=" border-0 justify-content-between g-2"
-                  style={{ width: "14rem", height: "19rem" }}
-                >
+                <Card className="card border-0 justify-content-between g-2">
                   <Card.Img
                     variant="top"
                     className="img pt-3 "
@@ -112,8 +108,8 @@ const PopularProducts = () => {
                     <Card.Title className=" fs-6 text-center">
                       {productObj.title}
                     </Card.Title>
-                    <Card.Text className=" text-center text-muted fw-light text"
-                    style={{ width: "11rem", height: '10vh', fontSize: '0.9em'  }}>
+                    <Card.Text className=" txt text-center text-muted fw-light text"
+                    >
                       {productObj.description.substring(0, 45)}
                     </Card.Text>
 

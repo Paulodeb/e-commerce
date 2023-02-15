@@ -1,13 +1,43 @@
-.img{
+ .img{
     object-fit: contain;    
     height: 8rem;
     justify-content: center;
     align-items: center;  
    
 }
+.pop-slide-container{
+    width: 100%;
+    margin: 0 auto;
+}
 
+.pop-slide-container .card{
+    width: 14rem;
+    height: 19rem;
+}
+
+.button-container{
+    width: 30%;
+}
+.pop-head{
+    width: 60%;
+}
+.card .txt{
+    width: 11rem;
+    height: 8vh;
+    font-size: 0.9em;
+}
 .button{
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+    .pop-head h1{
+        text-align: center;
+        padding-top: 0.5rem;
+        font-size: 1rem;
+
+    }
+
 }

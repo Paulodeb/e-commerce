@@ -76,11 +76,11 @@ const slider = React.useRef(null);
   return (
     <div className="featured container-fluid px-5 py-2 my-2 ">
       <div className="d-flex my-4 justify-content-between">
-        <div className="  ">
+        <div className=" pop-head ">
           <h1 className="h4 text-muted text-start">Featured Products</h1>
         </div>
         
-        <div className=" col-2 ">
+        <div className=" button-container ">
           <div className=" d-flex  justify-content-end">
 
           <div className="  me-2 next" onClick={prevSlide} >
@@ -117,7 +117,7 @@ const slider = React.useRef(null);
 
               <Card.Body className=" rounded-0  ">
                 <Card.Title className=" fs-6 text-center">{productObj.title}</Card.Title>
-                <Card.Text className=" text-center text-muted fw-light text">
+                <Card.Text className=" txt text-center text-muted fw-light text">
                       {productObj.description.substring(0, 45)}
                     </Card.Text>
 
