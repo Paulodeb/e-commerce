@@ -1,22 +1,56 @@
+#dropdown-basic-button{
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: start;
+  margin-bottom: 0.5rem;
+  margin-left: -0.3rem;
+ }
 
 
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #fff;
-  width: 100%;
-  margin-bottom: 20px;
-  overflow: hidden;
+
+.logo-container .logo{
+  width: 8rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: start;
 }
 
+.logo-container .text{
+  font-size: 0.8rem;
+  width: 10rem;
+  height: 5rem;
+}
 
+.header{
+  width: 10rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  text-align: start;  
+}
+.policy-container{
+  width: 10rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  text-align: start;
+}
+.subscribe-container{
+  width: 18rem;
+  height: 10rem;
+  text-align: start;
+}
 
+.footer-container ul{
+  align-items: start;
+  justify-content: start;
+}
 
-li {
+.footer-container li {
   list-style: none;
   font-size: .8rem;
+  margin-left: -30px;
   
 }
 
@@ -50,7 +84,7 @@ li {
 .sub-text {
   font-size: .9em;
   font-weight: 500;
-  /* color: #ccc; */
+  color: #ccc;
   padding-top: 10px;
 }
 .head-text{
@@ -59,51 +93,15 @@ li {
   color: #000;
   margin-bottom: 10px;
 }
-/* .logo-text {
-  font-size: 1.6em;
-  margin-top: 30px;
-  font-weight: 600;
-  color: #000;
-  padding-top: 10px;
-} */
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
 
-.footer-left,
-.footer-center,
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.footer-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.footer-items li {
-  margin: 0.5rem 0;
-}
 
-@media (min-width: 768px) {
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-  }
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    width: 33.33%;
-    text-align: center;
+  
+@media (min-width: 576px) {
+  .d-sm-none {
+    display: none !important;
   }
 }

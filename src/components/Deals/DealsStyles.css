@@ -2,3 +2,52 @@
   overflow: hidden;
   background-image: url("../../assets/Images/Background_Image.jpg");
 }
+
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.timer{
+  width: 14rem;
+  height: 12rem;
+  margin: 0 auto;
+}
+.card{
+  width: 15rem;
+  height: 20rem;
+  border: none;
+}
+
+.card-text{
+  width: 11rem;
+  height: 12vh;
+  font-size: 0.9em;
+}
+
+.prevArrow{
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgb(54, 69, 79);
+}
+.nextArrow{
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgb(54, 69, 79);
+}

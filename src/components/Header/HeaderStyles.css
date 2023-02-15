@@ -1,0 +1,48 @@
+.logo-con{
+    padding: 0 2rem;
+}
+.toggle-container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 80%;
+}
+.search-input-container{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 0;
+}
+
+
+
+.search-input{
+    width: 48vw;
+}
+
+.download{
+    /* width: 20%; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.sign{
+    align-items: center;
+    justify-content: center;
+    /* width: 20%;     */
+}
+.search-list{
+    text-align: center;
+    list-style: none;
+    font-size: .8rem;
+    width: 60%;
+}
+
+
+@media screen and (max-width: 1088px) {
+    .search-input{
+        width: 45vw;
+    }   
+}

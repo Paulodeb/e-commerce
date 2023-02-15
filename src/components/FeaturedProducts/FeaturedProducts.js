@@ -74,7 +74,7 @@ const slider = React.useRef(null);
   const prevSlide = () => slider?.current?.slickPrev()
 
   return (
-    <div className="container-fluid px-5 py-2 my-2 ">
+    <div className="featured container-fluid px-5 py-2 my-2 ">
       <div className="d-flex my-4 justify-content-between">
         <div className="  ">
           <h1 className="h4 text-muted text-start">Featured Products</h1>
@@ -99,9 +99,7 @@ const slider = React.useRef(null);
         </div>
       </div>
 
-      <div 
-      style={{width: "100%", margin: "0 auto"}}
-      >
+      <div className=".slider-container">
             <Slider ref={slider} { ...settings}>
 
         {
@@ -110,8 +108,7 @@ const slider = React.useRef(null);
             <div key={productObj.id} className=' ' >
             
 
-              <Card className=" border-0 justify-content-between"  
-              style={{ width: "14rem", height: "19rem", }}>
+              <Card className=" card border-0 justify-content-between">
               <Card.Img variant="top"
                 className=" img  mt-1 pt-3 "
                 src={productObj.cover}
@@ -120,8 +117,7 @@ const slider = React.useRef(null);
 
               <Card.Body className=" rounded-0  ">
                 <Card.Title className=" fs-6 text-center">{productObj.title}</Card.Title>
-                <Card.Text className=" text-center text-muted fw-light text"
-                    style={{ width: "11rem", height: '10vh', fontSize: '0.9em'  }}>
+                <Card.Text className=" text-center text-muted fw-light text">
                       {productObj.description.substring(0, 45)}
                     </Card.Text>
 

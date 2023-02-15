@@ -17,43 +17,12 @@ const Deals = () => {
     setProducts(Dealsdata);
   }, []);
 
- 
-  
-
   const NextArrow = ({ onClick }) => (
-    <RiArrowRightSLine
-      onClick={onClick}
-      style={{
-        fontSize: "36px",
-        backgroundColor: "white",
-        height: "40px",
-        width: "40px",
-        borderRadius: "50%",
-        position: "absolute",
-        top: "50%",
-        right: "10px",
-        boxShadow: "0px 0px 10px 0px rgb(54, 69, 79)",
-        zIndex: "1"
-      }}
-    />
+    <RiArrowRightSLine className="nextArrow" onClick={onClick} />
   );
 
   const PrevArrow = ({ onClick }) => (
-    <RiArrowLeftSLine
-      onClick={onClick}
-      style={{
-        backgroundColor: "white",
-        height: "40px",
-        width: "40px",
-        borderRadius: "50%",
-        fontSize: "36px",
-        position: "absolute",
-        top: "50%",
-        left: "-20px",
-        zIndex: "1",
-        boxShadow: "0px 0px 10px 0px rgb(54, 69, 79)",
-      }}
-    />
+    <RiArrowLeftSLine className="prevArrow" onClick={onClick} />
   );
 
   const settings = {
@@ -62,7 +31,7 @@ const Deals = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    
+
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
 
@@ -97,7 +66,7 @@ const Deals = () => {
         breakpoint: 426,
         settings: {
           slidesToShow: 1,
-          
+
           centerMode: true,
           centerPadding: "0px",
           slidesToScroll: 1,
@@ -110,21 +79,15 @@ const Deals = () => {
   return (
     <div className="container-fluid background">
       <div className=" d-flex flex-wrap justify-content-start py-5">
-        <div
-         style={{ width: '14rem', height:'12rem', margin: '0 auto' }}
-         className="pt-4 mt-5 justify-content-start text-start"
-        >
+        <div className=" timer pt-4 mt-5 justify-content-start text-start">
           <Timer />
         </div>
 
-        <div 
-        style={{ width: '80%', margin: '0 auto' }}
-        className="pe-2 "
-        >
+        <div className="pe-2 slider-container ">
           <Slider {...settings}>
             {products.map((productObj) => (
               <div key={productObj.id} className=" ">
-                <Card style={{ width: "15rem", height: "20rem", border: "none" }}>
+                <Card className="card">
                   <Card.Img
                     variant="top"
                     className="img pt-3"
@@ -136,7 +99,7 @@ const Deals = () => {
                     <Card.Title className=" fs-6 text-center">
                       {productObj.title}
                     </Card.Title>
-                    <Card.Text className=" text-center fw-light text-muted " style={{ width: "11rem", height: '12vh', fontSize: '0.9em'  }}>
+                    <Card.Text className=" card-text text-center fw-light text-muted ">
                       {productObj.description}
                     </Card.Text>
 
@@ -144,7 +107,9 @@ const Deals = () => {
                       <div className="  ">
                         <Rating rating={productObj.rating} />
                       </div>
-                      <h3 className=" fs-6 pt-1 fw-bolder text-center">₹{productObj.price}</h3>
+                      <h3 className=" fs-6 pt-1 fw-bolder text-center">
+                        ₹{productObj.price}
+                      </h3>
                     </div>
                   </Card.Body>
                 </Card>

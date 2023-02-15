@@ -15,41 +15,11 @@ const SlideShow = () => {
   }, []);
 
   const NextArrow = ({ onClick }) => (
-    <RiArrowRightSLine
-    className="nextArrow text-muted" 
-      onClick={onClick}
-      style={{
-        fontSize: "36px",
-        backgroundColor: "white",
-        height: "40px",
-        width: "40px",
-        borderRadius: "50%",
-        position: "absolute",
-        top: "50%",
-        right: "130px",
-        boxShadow: "0px 0px 10px 0px rgb(54, 69, 79)",
-        zIndex: "1"
-      }}
-    />
+    <RiArrowRightSLine className="slideNext text-muted" onClick={onClick} />
   );
 
   const PrevArrow = ({ onClick }) => (
-    <RiArrowLeftSLine
-      onClick={onClick}
-      className='prevArrow text-muted'
-      style={{
-        backgroundColor: "white",
-        height: "40px",
-        width: "40px",
-        borderRadius: "50%",
-        fontSize: "36px",
-        position: "absolute",
-        top: "50%",
-        left: "130px",
-        zIndex: "1",
-        boxShadow: "0px 0px 10px 0px rgb(54, 69, 79)"
-      }}
-    />
+    <RiArrowLeftSLine onClick={onClick} className="slidePrev text-muted" />
   );
 
   const settings = {
@@ -64,11 +34,15 @@ const SlideShow = () => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 441,
+        breakpoint: 600,
         settings: {
           centerPadding: "0px",
           centerMode: false,
+          dots: true,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          pauseOnHover: true
         }
       }
     ]
@@ -78,23 +52,19 @@ const SlideShow = () => {
     <div className="container-fluid ">
       <Slider {...settings}>
         {products.map((productObj, index) => (
-          <div key={productObj.id} style={{ position: "relative" }}>
+          <div key={productObj.id}>
             <img
-              className=" my-4 px-2"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className=" my-4 slide-img px-2"
               src={productObj.cover}
               alt="product"
             />
-            
-            <div className="product-text container pe-5 m-5"
-                
-            >
-              <h3  style={{  fontSize: '0.8rem'}}>{productObj.title}</h3>
-              <p style={{  fontSize:'0.5rem' }} >{productObj.description}</p>
-              <button className="px-3 " style={{  backgroundColor: 'white', border: 'none', fontSize:'0.3rem'  }}>
-              <p className="justify-content-center mt-2 " style={{ color: "black", fontSize:'0.5rem' }} >Buy Now</p>
-              </button>
 
+            <div className="product-text container pe-5 m-5">
+              <h3>{productObj.title}</h3>
+              <p>{productObj.description}</p>
+              <button className="px-3 ">
+                <p className="justify-content-center mt-2 ">Buy Now</p>
+              </button>
             </div>
           </div>
         ))}

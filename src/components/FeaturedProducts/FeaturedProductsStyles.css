@@ -1,3 +1,12 @@
+.featured .slider-container{
+    width: 100%;
+    margin: 0 auto;
+}
+.slider-container .card{
+    width: 14rem;
+    height: 19rem;
+    border: none;
+}
 .img{
     object-fit: contain;
  
@@ -7,9 +16,11 @@
     
     
 }
-.text{
-    font-size: 0.8em;
+.card .text{
+    font-size: 0.9em;
     font-weight: 500;
+    width: 11rem;
+    height: 10vh;
 }
 .button{
     border-radius: 50%;

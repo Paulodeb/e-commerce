@@ -52,7 +52,10 @@ const PopularProducts = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          centerPadding: "0px",
+          centerMode: false,
+
         }
       }
     ]
