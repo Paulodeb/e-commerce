@@ -5,13 +5,14 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SlideShowdata } from "./SlideShowdata";
+import { imageData } from '.././Data/imageData'
+
 
 const SlideShow = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(SlideShowdata);
+    setProducts(imageData.SlideShow);
   }, []);
 
   const NextArrow = ({ onClick }) => (
@@ -62,8 +63,8 @@ const SlideShow = () => {
             <div className="product-text container pe-5 m-5">
               <h3>{productObj.title}</h3>
               <p>{productObj.description}</p>
-              <button className="px-3 ">
-                <p className="justify-content-center mt-2 ">Buy Now</p>
+              <button className="px-3 py-1">
+                Buy Now
               </button>
             </div>
           </div>

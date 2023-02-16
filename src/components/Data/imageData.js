@@ -1,218 +1,222 @@
+import Deal1 from "../../assets/Images/Fossil.png";
+import Deal2 from "../../assets/Images/BPL 108cm.webp";
+import Deal3 from "../../assets/Images/dolphin.png";
+import Deal4 from "../../assets/Images/HP Deskjet.png";
+import Deal5 from "../../assets/Images/Royal oak.jpg";
+import Featured1 from "../../assets/Images/Fossil.png";
+import Featured2 from "../../assets/Images/BPL 108cm.webp";
+import Featured3 from "../../assets/Images/dolphin.png";
+import Featured4 from "../../assets/Images/HP Deskjet.png";
+import Featured5 from "../../assets/Images/Royal oak.jpg";
+import Popular1 from "../../assets/Images/Apple MacBook.png";
+import Popular2 from "../../assets/Images/acer aspire.png";
+import Popular3 from "../../assets/Images/micromax.png";
+import Popular4 from "../../assets/Images/Acer One.png";
+import Popular5 from "../../assets/Images/Acer E15 Celeron.png";
+import Popular6 from "../../assets/Images/Dell inspiron 7706.png";
+import Popular7 from "../../assets/Images/Dell Latitude 5421.png";
+import SlideShow1 from "../../assets/Images/Surface Studio.png";
+import SlideShow2 from "../../assets/Images/Wireless mouse.jpg";
+import SlideShow3 from "../../assets/Images/Tablet.jpg";
+import Display1 from "../../assets/Images/xboxone.jpg";
+import Display2 from "../../assets/Images/Nike.webp";
+import Display3 from "../../assets/Images/le-eco-le2.jpg";
 
-import image2 from "../../assets/images/Surface Studio.jpg";
-import image3 from "../../assets/images/Tablet.jpg";
-import image4 from "../../assets/images/Apple MacBook.jpg";
-import image5 from "../../assets/images/acer aspire.jpg";
-import image6 from "../../assets/images/micromax.webp";
-import image7 from "../../assets/images/Acer One.webp";
-import image8 from "../../assets/images/Acer E15 Celeron.jpg";
-import image9 from "../../assets/images/Dell inspiron 7706.jpg";
-import image10 from "../../assets/images/Dell Latitude 5421.jpg";
-import image11 from "../../assets/images/Fossil.jpg";
-import image12 from "../../assets/images/BPL 108cm.webp";
-import image13 from "../../assets/images/dolphin.jpeg";
-import image14 from "../../assets/images/HP Deskjet.webp";
-import image15 from "../../assets/images/Royal oak.jpg";
-import image16 from "../../assets/images/Royal oak.jpg";
-import image17 from "../../assets/images/Iphone11.webp";
-import image18 from "../../assets/images/xboxone.jpg";
-import image19 from "../../assets/images/Nike.webp";
-import image20 from "../../assets/images/le-eco-le2.jpg";
-import image21 from "../../assets/images/Ipad.jpg";
 
-export const imageSlide1 = [
+export const imageData = {
+  SlideShow: [
+    {
+      id: 1,
+      cover: SlideShow1,
+      title: "Surface Studio",
+      description: "Core i5 - (8 GB/128 GB SSD/OS X Yosemite) MF839...",
+      price: "$ 93,990",
+      rating: 4.5,
+  },
+  {
+      id: 2,
+      cover: SlideShow2,
+      title: "Logitech MX Master 2S",
+      description: "Use on Any Surface, Hyper-Fast Scrolling, ...",
+      price: "24,990",
+      rating: 4.5,
+  },
+  {
+      id: 3,
+      cover: SlideShow3,
+      title: "Tablet",
+      description: "(WIFI) Atom 4th Gen - (2 GB/32 GB EMMC...",
+      price: "9,999",
+      rating: 4.5,
+  },
+  ],
+  Display:[
+    {
+      id: 1,
+      cover: Display1,
+      title: "Fossil CH29271 Briggs",
+      description: "Analog Watch For Men",
+      price: "$ 3,990",
+      rating: 4.5,
+  },
+  {
+      id: 2,
+      cover: Display2,
+      title: "BPL 108cm (43)",
+      description: "Ultra HD (4K) Smart LED TV (BPL108K300S4H, 4 x HDML, 3 x",
+      price: "13,990",
+      rating: 4.5,
+  },
+  {
+      id: 3,
+      cover: Display3,
+      title: "Dolphin Fabric",
+      description: "3 + 2 Greay-Brown Sofa Set (Configuration - L-shaped)",
+      price: "32,999",
+      rating: 4.5,
+  },
+  ],
+  Deals: [
     {
         id: 1,
-        "image": "../../assets/images/Logitech.webp",
-        title: "M220 SILENT WIRELESS MOUSE",
-        description: "Silent, comfortable, and easy-to-use wireless mouse",
-        price: 27.99,
-        rating: 4.5,
-        
+        cover: Deal1,
+        title: "Fossil CH29271 Briggs",
+        description: "Analog Watch For Men",
+        price: "3,990",
+        rating: 5,
     },
     {
         id: 2,
-        "image": image2,
-        title: "Surface Studio",
-        description: "Surface Studio is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-        
+        cover: Deal2,
+        title: "BPL 108cm (43)",
+        description: "Ultra HD (4K) Smart LED TV (BPL108K300S4H, 4 x HDML, 3 x",
+        price: "13,990",
+        rating: 4,
     },
     {
         id: 3,
-        "image": image3,
-        title: "Huawei MatePad Pro",
-        description: "Huawei MatePad Pro is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-        
+        cover: Deal3,
+        title: "Dolphin Fabric",
+        description: "3 + 2 Greay-Brown Sofa Set (Configuration - L-shaped)",
+        price: "32,999",
+        rating: 3,
     },
     {
         id: 4,
-        "image": image12,
-        title: "Huawei MatePad Pro",
-        description: "Huawei MatePad Pro is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-        
+        cover: Deal4,
+        title: "HP DekJet",
+        description: "Ink Tank GT 5810 Multi-function Printer (Black)",
+        price: "13,990",
+        rating: 3,
     },
     {
         id: 5,
-        "image": image21,
-        title: "Huawei MatePad Pro",
-        description: "Huawei MatePad Pro is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-        
+        cover: Deal5,
+        title: "Royal Oak Atlas",
+        description: "Engineered Wood Coffee Table (Finish Color - Dark Brown)",
+        price: "4,990",
+        rating: 3,
     },
-]
+  ],
+  popularProducts:[
+    {
+      id: 1,
+      cover: Popular1,
+      title: "Apple MacBook Pro",
+      description: "Core i5 - (8 GB/128 GB SSD/OS X Yosemite) MF839...",
+      price: "$ 93,990",
+      rating: 5,
+  },
+  {
+      id: 2,
+      cover: Popular2,
+      title: "Acer Aspire R3",
+      description: "Pentium Quad Core 4th Gen - (4 GB/500 GB HDD/Window...",
+      price: "24,990",
+      rating: 4,
+  },
+  {
+      id: 3,
+      cover: Popular3,
+      title: "Micromax Canvas II",
+      description: "(WIFI) Atom 4th Gen - (2 GB/32 GB EMMC...",
+      price: "9,999",
+      rating: 3,
+  },
+  {
+      id: 4,
+      cover: Popular4,
+      title: "Acer One 10 Atom",
+      description: "5th Gen - (2 GB/32 GB EMMC Storage/Windows 10 Ho...",
+      price: "13,990",
+      rating: 3,
+  },
+  {
+      id: 5,
+      cover: Popular5,
+      title: "Acer E15 Celeron",
+      description: "Dual Core 4th Gen - (2 GB/500 GB HDD/Linux0 UN.M...",
+      price: "15,490",
+      rating: 3,
+  },
+  {
+      id: 6,
+      cover: Popular6,
+      title: "Acer E15 Celeron",
+      description: "Dual Core 4th Gen - (2 GB/500 GB HDD/Linux0 UN.M...",
+      price: "15,490",
+      rating: 3,
+  },
+  {
+      id: 7,
+      cover: Popular7,
+      title: "Acer E15 Celeron",
+      description: "Dual Core 4th Gen - (2 GB/500 GB HDD/Linux0 UN.M...",
+      price: "15,490",
+      rating: 5,
+  },
+  ],
+  featuredProducts:[
+    {
+      id: 1,
+      cover: Featured1,
+      title: "Fossil CH29271 Briggs",
+      description: "Analog Watch For Men",
+      price: " 3,990",
+      rating: 5,
+  },
+  {
+      id: 2,
+      cover: Featured2,
+      title: "BPL 108cm (43)",
+      description: "Ultra HD (4K) Smart LED TV (BPL108K300S4H, 4 x HDML, 3 x",
+      price: "13,990",
+      rating: 4,
+  },
+  {
+      id: 3,
+      cover: Featured3,
+      title: "Dolphin Fabric",
+      description: "3 + 2 Greay-Brown Sofa Set (Configuration - L-shaped)",
+      price: "32,999",
+      rating: 3,
+  },
+  {
+      id: 4,
+      cover: Featured4,
+      title: "HP DekJet",
+      description: "Ink Tank GT 5810 Multi-function Printer (Black)",
+      price: "13,990",
+      rating: 3,
+  },
+  {
+      id: 5,
+      cover: Featured5,
+      title: "Royal Oak Atlas",
+      description: "Engineered Wood Coffee Table (Finish Color - Dark Brown)",
+      price: "4,990",
+      rating: 3,
+  },
 
-export const imageSlide2 = [
-    {
-        id: 1,
-        image: "../../assets/images/Apple MacBook.jpg",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 2,
-        image: "../../assets/images/acer aspire.jpg",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 3,
-        image: "../../assets/images/micromax.webp",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 4,
-        image: "../../assets/images/micromax.webp",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 5,
-        image: "../../assets/images/Acer One.webp",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 6,
-        image: "../../assets/images/Acer One.webp",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 7,
-        image: "../../assets/images/Acer One.webp",
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-]
-
-export const imageSlide3 = [
-    {
-        id: 1,
-        "image": image11,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    
-    {
-        id: 2,
-        "image": image12,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 3,
-        "image": image13,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 4,
-        "image": image14,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 5,
-        "image": image15,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 6,
-        "image": image17,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 7,
-        "image": image21,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-
-]
-
-export const imageSlide4 = [
-    {
-        id: 1,
-        "image": image18,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    
-    {
-        id: 1,
-        "image": image19,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-    {
-        id: 3,
-        "image": image20,
-        title: "Apple MacBook Air",
-        description: "Apple MacBook Air is a powerful desktop designed for the creative process",
-        price: 27.99,
-        rating: 4.5,
-    },
-
-]
+  ],
+} 

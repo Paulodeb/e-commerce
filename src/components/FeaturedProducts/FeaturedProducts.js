@@ -6,7 +6,8 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {FeaturedProductsdata} from "./FeaturedProductsdata";
+import { imageData } from '.././Data/imageData'
+
 import Rating from '../PopularProducts/Rating';
 
 
@@ -63,7 +64,7 @@ const slider = React.useRef(null);
  
   
     const getProducts = () => {
-      setProducts(FeaturedProductsdata);
+      setProducts(imageData.featuredProducts);
     }
 
   useEffect(() => {
@@ -99,7 +100,7 @@ const slider = React.useRef(null);
         </div>
       </div>
 
-      <div className=".slider-container">
+      <div className="pop-slide-container">
             <Slider ref={slider} { ...settings}>
 
         {

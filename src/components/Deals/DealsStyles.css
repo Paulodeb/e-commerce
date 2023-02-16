@@ -6,24 +6,20 @@
 .slider-container {
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
-
+.slider-container .card{
+  width: 95%;
+  height: 100%;
+}
 .timer{
   width: 14rem;
   height: 12rem;
   margin: 0 auto;
 }
-.card{
-  width: 15rem;
-  height: 20rem;
-  border: none;
-}
 
-.card-text{
-  width: 11rem;
-  height: 8vh;
-  font-size: 0.9em;
-}
+
 
 .prevArrow{
   background-color: white;

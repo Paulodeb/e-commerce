@@ -6,7 +6,7 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { PopularProductsdata } from "./PopularProductsdata";
+import { imageData } from '.././Data/imageData'
 import Rating from './Rating';
 
 const PopularProducts = () => {
@@ -62,7 +62,7 @@ const PopularProducts = () => {
   };
 
   useEffect(() => {
-    setProducts(PopularProductsdata);
+    setProducts(imageData.popularProducts);
   }, []);
 
   const nextSlide = () => slider?.current?.slickNext();
@@ -104,7 +104,7 @@ const PopularProducts = () => {
                     alt="product"
                   />
 
-                  <Card.Body className=" rounded-0  ">
+                  <Card.Body className=" rounded-0   ">
                     <Card.Title className=" fs-6 text-center">
                       {productObj.title}
                     </Card.Title>

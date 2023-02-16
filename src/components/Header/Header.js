@@ -6,21 +6,35 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import { BsSearch } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
-import  { AiOutlineDownload } from "react-icons/ai";
+import  { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import './HeaderStyles.css'
 
 function Header({products}) {
 
   const [value, setValue] = useState('');
+  const [filteredData, setFilteredData] = useState([])
+  
 
-    
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleFilter = (event) => {
+    const searchWord = event.target.value
+    setValue(searchWord)
+    const newFilter = products.filter((value) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === '') {
+      setFilteredData([])
+    } else{
+      setFilteredData(newFilter)
+    }
   };
-  const handleSearch = (searchTerm) => {
-    setValue(searchTerm);
-  };
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setValue('')
+  }
+
   return (
     <>
       <Container fluid className=" " >
@@ -62,19 +76,33 @@ function Header({products}) {
                   <Nav className=" col-11 bg-white ">
                     <Form className="d-flex  border col-12 ">
                       <Form.Control
-                        type="search"
+                        type="text"
                         value={value} 
-                        onChange={handleChange}
+                        onChange={handleFilter}
                         placeholder="Search products & brands"
-                        className="col-12 border-0 "
+                        className="search-input col-12 border-0 "
                         aria-label="Search products & brands"
                       />
-                      <div className="m-2"
-                       onClick={handleSearch}>
-                        <BsSearch size={25} />    
-                      </div>
+                     <div className="searchIcon">
+                  {filteredData.length === 0 ?  (
+                  <BsSearch size={25} />
+                  ) : (
+                  <AiOutlineClose size={25} id='clearBtn' onClick={clearInput}/>
+                  )}
+                 
+                </div>
+                
                     </Form>
-                    <ul className="search-list">
+                    {filteredData.length !== 0 &&
+                <div className="t-dataResult">
+                {filteredData.slice(0, 5).map((product) => (
+                  <div className="dataItem" key={product.id}>
+                    <p>{product.title}</p>
+                  </div>
+                ))}
+              </div>
+              }
+                    {/* <ul className="search-list">
         {products.filter(products => {
           const searchTerm = value.toLowerCase();
           const title = products.title.toLowerCase();
@@ -84,7 +112,7 @@ function Header({products}) {
         .map((product) => (
           <li onClick={()=>handleSearch(product.title)} key={product.id}>{product.title}</li>
         ))}
-      </ul>
+      </ul> */}
             </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
@@ -92,29 +120,42 @@ function Header({products}) {
           </Navbar>
         ))}
           </div>
-          <div className="toggle-container">
-          <Navbar collapseOnSelect expand="lg" >
+          
+          <Navbar className="searchContainer" collapseOnSelect expand="lg" >
           <Navbar.Collapse
             className="  "
             id="responsive-navbar-nav"
           >
-            <Nav className=" row border bg-white ">
-              <Form className="d-flex search-input-container">
+            <Nav className=" row search">
+              <Form className="d-flex searchInput">
                 <Form.Control
-                 type="Search" 
+                 type="text" 
                  value={value} 
-                 onChange={handleChange}
+                 onChange={handleFilter}
                   placeholder="Search products & brands"
                   className="  search-input fw-normal text-muted border-0 "
                   aria-label="Search products & brands"
                 />
-                <div className="p-2"
-                onClick={handleSearch}>
+                <div className="searchIcon">
+                  {filteredData.length === 0 ?  (
                   <BsSearch size={25} />
+                  ) : (
+                  <AiOutlineClose size={25} id='clearBtn' onClick={clearInput}/>
+                  )}
+                 
                 </div>
                 
               </Form>
-              <ul className=" search-list">
+              
+              {filteredData.length !== 0 &&
+                <div className="dataResult">
+                {filteredData.slice(0, 5).map((product) => (
+                  <div className="dataItem" key={product.id}>
+                    <p>{product.title}</p>
+                  </div>
+                ))}
+              </div>}
+              {/* <ul className=" search-list">
         {products.filter(products => {
           const searchTerm = value.toLowerCase();
           const title = products.title.toLowerCase();
@@ -124,11 +165,11 @@ function Header({products}) {
         .map((product) => (
           <li onClick={()=>handleSearch(product.title)} key={product.id}>{product.title}</li>
         ))}
-      </ul>
+      </ul> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Navbar className="" collapseOnSelect expand="lg" >
+        <Navbar className="downloadContainer" collapseOnSelect expand="lg" >
 
           <Navbar.Toggle className="border-0">
             <div className="">
@@ -142,7 +183,7 @@ function Header({products}) {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Navbar className="" collapseOnSelect expand="lg">
+        <Navbar className="signContainer" collapseOnSelect expand="lg">
 
           <Navbar.Collapse>
 
@@ -153,7 +194,7 @@ function Header({products}) {
            </Nav>
           </Navbar.Collapse>
         </Navbar>
-          </div>
+          
         </div>
       </Container>
     </>

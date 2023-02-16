@@ -7,14 +7,14 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Dealsdata } from "./Dealsdata";
+import { imageData } from '.././Data/imageData'
 import Rating from "../PopularProducts/Rating";
 
 const Deals = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(Dealsdata);
+    setProducts(imageData.Deals);
   }, []);
 
   const NextArrow = ({ onClick }) => (
@@ -55,7 +55,7 @@ const Deals = () => {
         }
       },
       {
-        breakpoint: 767,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -99,11 +99,11 @@ const Deals = () => {
                     <Card.Title className=" fs-6 text-center">
                       {productObj.title}
                     </Card.Title>
-                    <Card.Text className=" card-text text-center fw-light text-muted ">
+                    <Card.Text className=" txt text-center fw-light text-muted ">
                       {productObj.description}
                     </Card.Text>
 
-                    <div className=" d-flex pb-3 justify-content-between">
+                    <div className=" d-flex justify-content-between">
                       <div className="  ">
                         <Rating rating={productObj.rating} />
                       </div>

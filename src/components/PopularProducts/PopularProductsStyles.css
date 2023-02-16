@@ -1,6 +1,7 @@
  .img{
     object-fit: contain;    
     height: 8rem;
+    padding: 1rem;
     justify-content: center;
     align-items: center;  
    
@@ -8,11 +9,13 @@
 .pop-slide-container{
     width: 100%;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .pop-slide-container .card{
-    width: 14rem;
-    height: 19rem;
+    width: 95%;
+    height: 100%;
 }
 
 .button-container{
@@ -22,8 +25,8 @@
     width: 60%;
 }
 .card .txt{
-    width: 11rem;
-    height: 8vh;
+    width: 90%;
+    height: 60px;
     font-size: 0.9em;
 }
 .button{

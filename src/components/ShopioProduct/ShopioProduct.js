@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ShopioProductsStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Sliderdata } from "./Sliderdata";
+import { imageData } from '.././Data/imageData'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +10,7 @@ const ShopioProduct = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(Sliderdata);
+    setProducts(imageData.Display);
   }, []);
   const settings = {
     dots: false,
